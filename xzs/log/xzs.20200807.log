@@ -1,0 +1,142 @@
+2020-08-07 17:43:59.301  INFO 9312 --- [restartedMain] com.mindskip.xzs.XzsApplication          : Starting XzsApplication on DESKTOP-N1BO7F4 with PID 9312 (D:\MyFiles\ideaWorkSpaces\xzs\target\classes started by LPF in D:\MyFiles\ideaWorkSpaces\xzs)
+2020-08-07 17:43:59.304  INFO 9312 --- [restartedMain] com.mindskip.xzs.XzsApplication          : The following profiles are active: dev
+2020-08-07 17:44:00.019  INFO 9312 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-07 17:44:00.020  INFO 9312 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-07 17:44:13.782  INFO 9312 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-08-07 17:44:13.801  INFO 9312 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-08-07 17:44:14.360  INFO 9312 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 216ms. Found 0 repository interfaces.
+2020-08-07 17:44:16.275  INFO 9312 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'cacheConfig' of type [com.mindskip.xzs.configuration.spring.cache.CacheConfig$$EnhancerBySpringCGLIB$$5fa8fb9e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-07 17:44:16.284  INFO 9312 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8664eb5d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-07 17:44:17.245  WARN 9312 --- [restartedMain] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2020-08-07 17:44:17.609  INFO 9312 --- [restartedMain] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2020-08-07 17:44:17.609  INFO 9312 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 17589 ms
+2020-08-07 17:44:26.206  INFO 9312 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2d091b56, org.springframework.security.web.context.SecurityContextPersistenceFilter@11d8cba7, org.springframework.security.web.header.HeaderWriterFilter@23218b79, org.springframework.web.filter.CorsFilter@1e667179, org.springframework.security.web.authentication.logout.LogoutFilter@3a3ce56a, com.mindskip.xzs.configuration.spring.security.RestLoginAuthenticationFilter@4ae94b44, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@34d600e8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@63012f30, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@173ea7b1, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@101b2d85, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@72e8797f, org.springframework.security.web.session.SessionManagementFilter@c378a8e, org.springframework.security.web.access.ExceptionTranslationFilter@239d7045, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@130f07e6]
+2020-08-07 17:44:28.838  INFO 9312 --- [restartedMain] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-08-07 17:44:28.840  INFO 9312 --- [restartedMain] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-08-07 17:44:31.685  WARN 9312 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'enableRedisKeyspaceNotificationsInitializer' defined in class path resource [org/springframework/boot/autoconfigure/session/RedisSessionConfiguration$SpringBootRedisHttpSessionConfiguration.class]: Invocation of init method failed; nested exception is org.springframework.data.redis.connection.PoolException: Could not get a resource from the pool; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 192.168.1.24:6379
+2020-08-07 17:44:32.878  INFO 9312 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-08-07 17:44:32.936 ERROR 9312 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'enableRedisKeyspaceNotificationsInitializer' defined in class path resource [org/springframework/boot/autoconfigure/session/RedisSessionConfiguration$SpringBootRedisHttpSessionConfiguration.class]: Invocation of init method failed; nested exception is org.springframework.data.redis.connection.PoolException: Could not get a resource from the pool; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 192.168.1.24:6379
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1778)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202)
+	at com.mindskip.xzs.XzsApplication.main(XzsApplication.java:20)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.data.redis.connection.PoolException: Could not get a resource from the pool; nested exception is io.lettuce.core.RedisConnectionException: Unable to connect to 192.168.1.24:6379
+	at org.springframework.data.redis.connection.lettuce.LettucePoolingConnectionProvider.getConnection(LettucePoolingConnectionProvider.java:86)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getNativeConnection(LettuceConnectionFactory.java:1104)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$SharedConnection.getConnection(LettuceConnectionFactory.java:1085)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getSharedConnection(LettuceConnectionFactory.java:866)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory.getConnection(LettuceConnectionFactory.java:341)
+	at org.springframework.session.data.redis.config.annotation.web.http.RedisHttpSessionConfiguration$EnableRedisKeyspaceNotificationsInitializer.afterPropertiesSet(RedisHttpSessionConfiguration.java:302)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1837)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1774)
+	... 21 common frames omitted
+Caused by: io.lettuce.core.RedisConnectionException: Unable to connect to 192.168.1.24:6379
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:78)
+	at io.lettuce.core.RedisConnectionException.create(RedisConnectionException.java:56)
+	at io.lettuce.core.AbstractRedisClient.getConnection(AbstractRedisClient.java:235)
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:204)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:113)
+	at java.util.Optional.orElseGet(Optional.java:267)
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:113)
+	at org.springframework.data.redis.connection.lettuce.LettucePoolingConnectionProvider.lambda$null$0(LettucePoolingConnectionProvider.java:74)
+	at io.lettuce.core.support.ConnectionPoolSupport$RedisPooledObjectFactory.create(ConnectionPoolSupport.java:209)
+	at io.lettuce.core.support.ConnectionPoolSupport$RedisPooledObjectFactory.create(ConnectionPoolSupport.java:199)
+	at org.apache.commons.pool2.BasePooledObjectFactory.makeObject(BasePooledObjectFactory.java:58)
+	at org.apache.commons.pool2.impl.GenericObjectPool.create(GenericObjectPool.java:874)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:417)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:346)
+	at io.lettuce.core.support.ConnectionPoolSupport$1.borrowObject(ConnectionPoolSupport.java:122)
+	at io.lettuce.core.support.ConnectionPoolSupport$1.borrowObject(ConnectionPoolSupport.java:117)
+	at org.springframework.data.redis.connection.lettuce.LettucePoolingConnectionProvider.getConnection(LettucePoolingConnectionProvider.java:80)
+	... 28 common frames omitted
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /192.168.1.24:6379
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:670)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:617)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:534)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:906)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	... 12 common frames omitted
+
+2020-08-07 17:46:44.062  INFO 12788 --- [restartedMain] com.mindskip.xzs.XzsApplication          : Starting XzsApplication on DESKTOP-N1BO7F4 with PID 12788 (D:\MyFiles\ideaWorkSpaces\xzs\target\classes started by LPF in D:\MyFiles\ideaWorkSpaces\xzs)
+2020-08-07 17:46:44.065  INFO 12788 --- [restartedMain] com.mindskip.xzs.XzsApplication          : The following profiles are active: dev
+2020-08-07 17:46:44.112  INFO 12788 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-07 17:46:44.113  INFO 12788 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-07 17:46:44.952  INFO 12788 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-08-07 17:46:44.955  INFO 12788 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-08-07 17:46:45.012  INFO 12788 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41ms. Found 0 repository interfaces.
+2020-08-07 17:46:45.400  INFO 12788 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'cacheConfig' of type [com.mindskip.xzs.configuration.spring.cache.CacheConfig$$EnhancerBySpringCGLIB$$fae47a70] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-07 17:46:45.409  INFO 12788 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$21a06a2f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-07 17:46:45.721  WARN 12788 --- [restartedMain] io.undertow.websockets.jsr               : UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2020-08-07 17:46:45.749  INFO 12788 --- [restartedMain] io.undertow.servlet                      : Initializing Spring embedded WebApplicationContext
+2020-08-07 17:46:45.749  INFO 12788 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1636 ms
+2020-08-07 17:46:47.107  INFO 12788 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5c4d8224, org.springframework.security.web.context.SecurityContextPersistenceFilter@25d99cce, org.springframework.security.web.header.HeaderWriterFilter@44923fd4, org.springframework.web.filter.CorsFilter@53f2056f, org.springframework.security.web.authentication.logout.LogoutFilter@6c1da7bf, com.mindskip.xzs.configuration.spring.security.RestLoginAuthenticationFilter@6bae5f4f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6e4edcab, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5715b88, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2d51ad72, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@553daae7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6c02f660, org.springframework.security.web.session.SessionManagementFilter@46ecc72c, org.springframework.security.web.access.ExceptionTranslationFilter@7fffb130, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@52752f74]
+2020-08-07 17:46:47.638  INFO 12788 --- [restartedMain] io.lettuce.core.EpollProvider            : Starting without optional epoll library
+2020-08-07 17:46:47.640  INFO 12788 --- [restartedMain] io.lettuce.core.KqueueProvider           : Starting without optional kqueue library
+2020-08-07 17:46:48.105  INFO 12788 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-08-07 17:46:48.726  INFO 12788 --- [restartedMain] s.a.ScheduledAnnotationBeanPostProcessor : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2020-08-07 17:46:48.841  INFO 12788 --- [restartedMain] org.xnio                                 : XNIO version 3.3.8.Final
+2020-08-07 17:46:48.853  INFO 12788 --- [restartedMain] org.xnio.nio                             : XNIO NIO Implementation Version 3.3.8.Final
+2020-08-07 17:46:48.930  INFO 12788 --- [restartedMain] o.s.b.w.e.u.UndertowServletWebServer     : Undertow started on port(s) 8000 (http) with context path ''
+2020-08-07 17:46:48.934  INFO 12788 --- [restartedMain] com.mindskip.xzs.XzsApplication          : Started XzsApplication in 5.543 seconds (JVM running for 6.643)
+2020-08-07 17:46:49.965  INFO 12788 --- [XNIO-1 task-1] io.undertow.servlet                      : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-07 17:46:49.965  INFO 12788 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-08-07 17:46:49.973  INFO 12788 --- [XNIO-1 task-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-08-07 17:50:11.765  INFO 12788 --- [XNIO-1 task-57] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-08-07 17:50:11.967  INFO 12788 --- [XNIO-1 task-57] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-08-07 17:50:11.974 DEBUG 12788 --- [XNIO-1 task-57] r.c.m.x.r.UserMapper.getUserByUserName   : ==>  Preparing: select id, user_uuid, user_name, password, real_name, age, sex, birth_day, user_level, phone, role, status, image_path, create_time, modify_time, last_active_time, deleted, wx_open_id from t_user where deleted=0 and user_name=? limit 1 
+2020-08-07 17:50:12.004 DEBUG 12788 --- [XNIO-1 task-57] r.c.m.x.r.UserMapper.getUserByUserName   : ==> Parameters: admin(String)
+2020-08-07 17:50:12.056 DEBUG 12788 --- [XNIO-1 task-57] r.c.m.x.r.UserMapper.getUserByUserName   : <==      Total: 1
+2020-08-07 17:50:12.307 DEBUG 12788 --- [XNIO-1 task-57] r.c.m.x.r.U.insertSelective              : ==>  Preparing: insert into t_user_event_log ( user_id, user_name, real_name, content, create_time ) values ( ?, ?, ?, ?, ? ) 
+2020-08-07 17:50:12.309 DEBUG 12788 --- [XNIO-1 task-57] r.c.m.x.r.U.insertSelective              : ==> Parameters: 2(Integer), admin(String), 管理员(String), admin 登录了学之思考试系统(String), 2020-08-07 17:50:12.286(Timestamp)
+2020-08-07 17:50:12.342 DEBUG 12788 --- [XNIO-1 task-57] r.c.m.x.r.U.insertSelective              : <==    Updates: 1
+2020-08-07 17:50:12.509 DEBUG 12788 --- [XNIO-1 task-58] r.c.m.x.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper where deleted=0 
+2020-08-07 17:50:12.509 DEBUG 12788 --- [XNIO-1 task-58] r.c.m.x.r.E.selectAllCount               : ==> Parameters: 
+2020-08-07 17:50:12.597 DEBUG 12788 --- [XNIO-1 task-58] r.c.m.x.r.E.selectAllCount               : <==      Total: 1
+2020-08-07 17:50:12.598 DEBUG 12788 --- [XNIO-1 task-58] r.c.m.x.r.QuestionMapper.selectAllCount  : ==>  Preparing: SELECT count(*) from t_question where deleted=0 
+2020-08-07 17:50:12.598 DEBUG 12788 --- [XNIO-1 task-58] r.c.m.x.r.QuestionMapper.selectAllCount  : ==> Parameters: 
+2020-08-07 17:50:12.656 DEBUG 12788 --- [XNIO-1 task-58] r.c.m.x.r.QuestionMapper.selectAllCount  : <==      Total: 1
+2020-08-07 17:50:12.656 DEBUG 12788 --- [XNIO-1 task-58] r.c.m.x.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper_answer 
+2020-08-07 17:50:12.657 DEBUG 12788 --- [XNIO-1 task-58] r.c.m.x.r.E.selectAllCount               : ==> Parameters: 
+2020-08-07 17:50:12.675 DEBUG 12788 --- [XNIO-1 task-58] r.c.m.x.r.E.selectAllCount               : <==      Total: 1
+2020-08-07 17:50:12.676 DEBUG 12788 --- [XNIO-1 task-58] r.c.m.x.r.E.selectAllCount               : ==>  Preparing: SELECT count(*) from t_exam_paper_question_customer_answer 
+2020-08-07 17:50:12.676 DEBUG 12788 --- [XNIO-1 task-58] r.c.m.x.r.E.selectAllCount               : ==> Parameters: 
+2020-08-07 17:50:12.688 DEBUG 12788 --- [XNIO-1 task-58] r.c.m.x.r.E.selectAllCount               : <==      Total: 1
+2020-08-07 17:50:12.691 DEBUG 12788 --- [XNIO-1 task-58] r.c.m.x.r.U.selectCountByDate            : ==>  Preparing: SELECT create_time as name,COUNT(create_time) as value from ( SELECT DATE_FORMAT(create_time,'%Y-%m-%d') as create_time from t_user_event_log WHERE create_time between ? and ? ) a GROUP BY create_time 
+2020-08-07 17:50:12.692 DEBUG 12788 --- [XNIO-1 task-58] r.c.m.x.r.U.selectCountByDate            : ==> Parameters: 2020-08-01 00:00:00.0(Timestamp), 2020-08-31 23:59:59.0(Timestamp)
+2020-08-07 17:50:12.694 DEBUG 12788 --- [XNIO-1 task-58] r.c.m.x.r.U.selectCountByDate            : <==      Total: 3
+2020-08-07 17:50:12.697 DEBUG 12788 --- [XNIO-1 task-58] r.c.m.x.r.E.selectCountByDate            : ==>  Preparing: SELECT create_time as name,COUNT(create_time) as value from ( SELECT DATE_FORMAT(create_time,'%Y-%m-%d') as create_time from t_exam_paper_question_customer_answer WHERE create_time between ? and ? ) a GROUP BY create_time 
+2020-08-07 17:50:12.698 DEBUG 12788 --- [XNIO-1 task-58] r.c.m.x.r.E.selectCountByDate            : ==> Parameters: 2020-08-01 00:00:00.0(Timestamp), 2020-08-31 23:59:59.0(Timestamp)
+2020-08-07 17:50:12.700 DEBUG 12788 --- [XNIO-1 task-58] r.c.m.x.r.E.selectCountByDate            : <==      Total: 1
+2020-08-07 17:53:33.904  INFO 12788 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-08-07 17:53:33.909  INFO 12788 --- [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-08-07 17:53:35.023  INFO 12788 --- [Thread-19] io.undertow.servlet                      : Destroying Spring FrameworkServlet 'dispatcherServlet'
